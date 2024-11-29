@@ -6,12 +6,12 @@ Welcome to my SQL Projects repository! This collection showcases various SQL pro
 
 ## 📁 Projects  
 
-### 1. **Project Name 1: Example Title**
-   - **Objective**: Briefly describe the goal of the project (e.g., "Analyze customer behavior from an e-commerce database").
-   - **Skills Highlighted**: Include the techniques or concepts applied (e.g., joins, subqueries, aggregate functions).
-   - **Dataset**: Describe the dataset used or provide a link if it's public.
-   - **Key Findings**: Highlight the most important insights or achievements from the project.
-   - **Output**: Include links to visualizations (Tableau, Power BI, etc.) if applicable.
+### 1. **Project Name 1: Chicago Crime**
+   - **Objective**: Analyze crime data from the Chicago Crime dataset. The queries provide insights into unique crime types, data consistency improvements, and crime trends over time.
+   - **Skills Highlighted**: Data cleaning and transformation using SQL functions like REPLACE and DISTINCT, Creating and storing new tables for clean and structured data analysis, Sorting and filtering data for targeted insights.
+   - **Dataset**: The dataset is the publicly available Chicago Crime dataset from Google BigQuery, which contains detailed information about crimes in Chicago from 2001 to 2024. Link to Dataset.
+   - **Key Findings**: Over 8 million crimes were committed in Chicago from 2001 to 2024, The most common crime type is theft, as indicated by its frequency in the dataset, The five years with the highest crime rates highlight peak periods for law enforcement and community focus.
+  
 
 
 
@@ -21,7 +21,7 @@ Welcome to my SQL Projects repository! This collection showcases various SQL pro
 
 - **SQL Queries**: Complex joins, subqueries, aggregate functions, and window functions.
 - **Database Management**: Data cleaning, schema design, and optimization techniques.
-- **Data Visualization**: Integration with tools like Tableau or Power BI.
+- **Data Visualization**: Integration with tools like Tableau.
 - **Data Analysis**: Identifying trends, creating reports, and deriving actionable insights.
 
 ---
@@ -38,8 +38,8 @@ Here are some of my interactive dashboards created using the insights from these
 
 If you have any questions or suggestions, feel free to reach out!
 
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
+- **Email**: [damianchevy1203@gmail.com](mailto:your.email@example.com)
 - **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **Tableau Public**: [Your Tableau Profile](https://public.tableau.com/profile/yourprofile)
+- **Tableau Public**: [https://public.tableau.com/app/profile/damian.chevalier](https://public.tableau.com/profile/yourprofile)
 
 
