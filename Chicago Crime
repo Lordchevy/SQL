@@ -1,21 +1,17 @@
-This query helps you find all unique crime types in the dataset, sorted in alphabetical order.
+#This query helps you find all unique crime types in the dataset, sorted in alphabetical order.
 SELECT DISTINCT primary_type
  FROM `bigquery-public-data.chicago_crime.crime`
  ORDER BY primary_type ASC;
 
 
-This query is transforming specific values in the primary_type column for consistency and creating a new column (updated_primary_type) with the modified crime types. The results are ordered by the date of occurrence.
-
-
+#This query is transforming specific values in the primary_type column for consistency and creating a new column (updated_primary_type) with the modified crime types. The results are ordered by the date of occurrence.
 SELECT date, block,
        REPLACE(REPLACE(REPLACE(primary_type, 'CRIM SEXUAL ASSAULT', 'CRIMINAL SEXUAL ASSAULT'), 'NON - CRIMINAL', 'NON-CRIMINAL'), 'NON-CRIMINAL (SUBJECT SPECIFIED)', 'NON-CRIMINAL') AS updated_primary_type
 FROM `bigquery-public-data.chicago_crime.crime`
 ORDER BY date ASC;
 
 
- Creates a new table with date, block, and the transformed primary_type values, sorted by date, and stores this data in a new table chitown_v2.
-
-
+#Creates a new table with date, block, and the transformed primary_type values, sorted by date, and stores this data in a new table chitown_v2.
 CREATE TABLE `friendly-vigil-382100.new_chicago_crime.chitown_v2` AS
 SELECT date, block,
        REPLACE(REPLACE(REPLACE(primary_type, 'CRIM SEXUAL ASSAULT', 'CRIMINAL SEXUAL ASSAULT'), 'NON - CRIMINAL', 'NON-CRIMINAL'), 'NON-CRIMINAL (SUBJECT SPECIFIED)', 'NON-CRIMINAL') AS primary_type
@@ -23,46 +19,23 @@ FROM `bigquery-public-data.chicago_crime.crime`
 ORDER BY date ASC;
 
 
-This query tells us there has been a total amount of 8,193,694 crimes committed in Chicago from 2001-2024 according to the dataset. 
-
-
+#This query tells us there has been a total amount of 8,193,694 crimes committed in Chicago from 2001-2024 according to the dataset. 
 SELECT COUNT(*) AS total_crimes
 FROM `friendly-vigil-382100.new_chicago_crime.chitown_v2`
 
-
-
-
-
-
-
-
-
-
-
-
-This will give you the 5 years with the highest number of crimes committed in the chitown_v2 dataset.
-
-
+#This will give you the 5 years with the highest number of crimes committed in the chitown_v2 dataset.
 SELECT EXTRACT(YEAR FROM date) AS year, COUNT(*) AS total_crimes
 FROM `friendly-vigil-382100.new_chicago_crime.chitown_v2`
 GROUP BY year
 ORDER BY total_crimes DESC
 LIMIT 5;
 
-
-This query tells you how many total thefts were committed during this time span.
-
-
+#This query tells you how many total thefts were committed during this time span.
 SELECT COUNT(*) AS total_thefts
 FROM `friendly-vigil-382100.new_chicago_crime.chitown_v2`
 WHERE primary_type = 'THEFT';
 
-
-
-
-Tells you the top 5 years with the least amount of murders committed. 
-
-
+#Tells you the top 5 years with the least amount of murders committed. 
 SELECT EXTRACT(YEAR FROM date) AS year, COUNT(*) AS total_thefts
 FROM `friendly-vigil-382100.new_chicago_crime.chitown_v2`
 WHERE primary_type = 'THEFT'
