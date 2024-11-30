@@ -39,7 +39,7 @@ Here are some of my interactive dashboards created using the insights from these
 If you have any questions or suggestions, feel free to reach out!
 
 - **Email**: [damianchevy1203@gmail.com](mailto:your.email@example.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
+- **LinkedIn**: [www.linkedin.com/in/damian-chevalier-56ba97286](https://linkedin.com/in/yourprofile)
 - **Tableau Public**: [https://public.tableau.com/app/profile/damian.chevalier](https://public.tableau.com/profile/yourprofile)
 
 
